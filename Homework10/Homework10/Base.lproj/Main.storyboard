@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0nm-oi-2gZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Items-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="სახელი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KB6-kb-1aa">
+                                <rect key="frame" x="75" y="237" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="რაოდენობა" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlM-7X-naE">
+                                <rect key="frame" x="75" y="297" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-97-hsS">
+                                <rect key="frame" x="75" y="561" width="264" height="44"/>
+                                <color key="backgroundColor" red="0.65996728530000004" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jQO-le-uQp"/>
+                                </constraints>
+                                <state key="normal" title="დამატება">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uns-9o-PtF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-CQ-KWL">
+                                <rect key="frame" x="75" y="646" width="264" height="44"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.77568493149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mGw-f8-XyG"/>
+                                </constraints>
+                                <state key="normal" title="გამოთვლა">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOY-of-yvw"/>
+                                    <segue destination="OD9-pO-90d" kind="push" id="RBm-Ch-yP0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMm-bZ-cMD">
+                                <rect key="frame" x="332" y="132" width="62" height="50"/>
+                                <color key="backgroundColor" red="0.78058112160000004" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KhL-NW-LoE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="წონა (კგ)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-IH-qkc">
+                                <rect key="frame" x="75" y="417" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ფასი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yif-x5-k64">
+                                <rect key="frame" x="75" y="357" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-lN-pxm">
+                                <rect key="frame" x="75" y="486" width="264" height="32"/>
+                                <segments>
+                                    <segment title="ხილი"/>
+                                    <segment title="ბოსტნეული"/>
+                                    <segment title="თხილეული"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uMm-bZ-cMD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="332" id="8YD-j5-PNM"/>
+                            <constraint firstItem="KB6-kb-1aa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="8wi-lM-Jll"/>
+                            <constraint firstItem="KB6-kb-1aa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="149" id="CDa-EO-WkA"/>
+                            <constraint firstItem="sbT-CQ-KWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="Cpn-oD-amC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sms-97-hsS" secondAttribute="trailing" constant="75" id="EVx-1a-OQA"/>
+                            <constraint firstItem="0Ub-IH-qkc" firstAttribute="width" secondItem="9x8-lN-pxm" secondAttribute="width" id="GDg-sA-7u9"/>
+                            <constraint firstItem="AlM-7X-naE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="H2f-OB-97k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yif-x5-k64" secondAttribute="trailing" constant="75" id="HI3-X7-cVP"/>
+                            <constraint firstItem="AlM-7X-naE" firstAttribute="height" secondItem="yif-x5-k64" secondAttribute="height" id="IKw-hR-3Sd"/>
+                            <constraint firstItem="yif-x5-k64" firstAttribute="height" secondItem="0Ub-IH-qkc" secondAttribute="height" id="IkN-T5-6KZ"/>
+                            <constraint firstItem="9x8-lN-pxm" firstAttribute="top" secondItem="0Ub-IH-qkc" secondAttribute="bottom" constant="35" id="J40-fd-QzG"/>
+                            <constraint firstItem="AlM-7X-naE" firstAttribute="top" secondItem="KB6-kb-1aa" secondAttribute="bottom" constant="26" id="JMO-c5-ATT"/>
+                            <constraint firstItem="sbT-CQ-KWL" firstAttribute="top" secondItem="Sms-97-hsS" secondAttribute="bottom" constant="41" id="Pgc-DE-Q67"/>
+                            <constraint firstItem="0Ub-IH-qkc" firstAttribute="top" secondItem="yif-x5-k64" secondAttribute="bottom" constant="26" id="QOf-bW-Xiz"/>
+                            <constraint firstItem="KB6-kb-1aa" firstAttribute="height" secondItem="AlM-7X-naE" secondAttribute="height" id="RaK-ff-PO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sbT-CQ-KWL" secondAttribute="trailing" constant="75" id="Tkm-3p-HZU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AlM-7X-naE" secondAttribute="trailing" constant="75" id="XJ7-ao-Ai3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KB6-kb-1aa" secondAttribute="trailing" constant="75" id="at4-nI-e8B"/>
+                            <constraint firstItem="Sms-97-hsS" firstAttribute="top" secondItem="9x8-lN-pxm" secondAttribute="bottom" constant="44" id="beY-va-k6T"/>
+                            <constraint firstItem="yif-x5-k64" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="cvy-JK-X09"/>
+                            <constraint firstItem="yif-x5-k64" firstAttribute="top" secondItem="AlM-7X-naE" secondAttribute="bottom" constant="26" id="gpH-bA-54C"/>
+                            <constraint firstItem="AlM-7X-naE" firstAttribute="width" secondItem="yif-x5-k64" secondAttribute="width" id="hIT-df-3s5"/>
+                            <constraint firstItem="0Ub-IH-qkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="nT9-CI-aFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uMm-bZ-cMD" secondAttribute="trailing" constant="20" id="ofC-g4-8IM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9x8-lN-pxm" secondAttribute="trailing" constant="75" id="qLb-ew-JCs"/>
+                            <constraint firstItem="0Ub-IH-qkc" firstAttribute="height" secondItem="9x8-lN-pxm" secondAttribute="height" multiplier="1.09677" id="rNT-C6-bx5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ub-IH-qkc" secondAttribute="trailing" constant="75" id="reo-3T-FeI"/>
+                            <constraint firstItem="Sms-97-hsS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="uXS-4P-KeJ"/>
+                            <constraint firstItem="uMm-bZ-cMD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="vVb-VA-83C"/>
+                            <constraint firstItem="KB6-kb-1aa" firstAttribute="width" secondItem="AlM-7X-naE" secondAttribute="width" id="wid-tb-xaL"/>
+                            <constraint firstItem="9x8-lN-pxm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="x7z-xO-LQ2"/>
+                            <constraint firstItem="yif-x5-k64" firstAttribute="width" secondItem="0Ub-IH-qkc" secondAttribute="width" id="yv8-6z-9Ef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Items" id="Uua-Q6-iky"/>
+                    <connections>
+                        <outlet property="numProductsLabel" destination="uMm-bZ-cMD" id="YMG-Ds-0vU"/>
+                        <outlet property="numProductsTextField" destination="AlM-7X-naE" id="say-Mk-bxb"/>
+                        <outlet property="priceTextField" destination="yif-x5-k64" id="LRu-Of-BaS"/>
+                        <outlet property="productNameTextField" destination="KB6-kb-1aa" id="gq2-RT-iEK"/>
+                        <outlet property="weightTextField" destination="0Ub-IH-qkc" id="vv3-qY-uhr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="TLU-Pk-h0i">
+            <objects>
+                <viewController storyboardIdentifier="info_vc" id="OD9-pO-90d" customClass="ProductsViewController" customModule="Homework10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ch-zD-7VA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ჯამური ფასი: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-lY-5Am">
+                                <rect key="frame" x="44" y="285" width="326" height="44"/>
+                                <color key="backgroundColor" red="0.65996728530000004" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zl2-1u-V0a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ჯამური წონა:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ2-br-c4A">
+                                <rect key="frame" x="44" y="188" width="326" height="44"/>
+                                <color key="backgroundColor" red="0.65996728530000004" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bx6-Yu-B0v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="პროდუქტების ჩამონათვალი" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-8w-ziP">
+                                <rect key="frame" x="44" y="382" width="326" height="44"/>
+                                <color key="backgroundColor" red="0.65996728530000004" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jaR-ME-55B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78058112160000004" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zLI-lY-5Am" firstAttribute="height" secondItem="WLq-8w-ziP" secondAttribute="height" id="5pn-7c-Lj8"/>
+                            <constraint firstItem="nJ2-br-c4A" firstAttribute="width" secondItem="zLI-lY-5Am" secondAttribute="width" id="9mb-rK-u10"/>
+                            <constraint firstItem="hMb-Da-HbW" firstAttribute="trailing" secondItem="nJ2-br-c4A" secondAttribute="trailing" constant="44" id="ENe-cb-oVI"/>
+                            <constraint firstItem="hMb-Da-HbW" firstAttribute="trailing" secondItem="WLq-8w-ziP" secondAttribute="trailing" constant="44" id="OLh-ZP-9Mt"/>
+                            <constraint firstItem="zLI-lY-5Am" firstAttribute="leading" secondItem="hMb-Da-HbW" secondAttribute="leading" constant="44" id="OrG-Jl-uEh"/>
+                            <constraint firstItem="zLI-lY-5Am" firstAttribute="width" secondItem="WLq-8w-ziP" secondAttribute="width" id="QES-hX-Oc1"/>
+                            <constraint firstItem="nJ2-br-c4A" firstAttribute="height" secondItem="zLI-lY-5Am" secondAttribute="height" id="RAP-sN-D6c"/>
+                            <constraint firstItem="nJ2-br-c4A" firstAttribute="leading" secondItem="hMb-Da-HbW" secondAttribute="leading" constant="44" id="V92-Z2-WfL"/>
+                            <constraint firstItem="zLI-lY-5Am" firstAttribute="top" secondItem="nJ2-br-c4A" secondAttribute="bottom" constant="53" id="VZz-8e-1Mc"/>
+                            <constraint firstItem="WLq-8w-ziP" firstAttribute="leading" secondItem="hMb-Da-HbW" secondAttribute="leading" constant="44" id="ZMW-We-MUy"/>
+                            <constraint firstItem="hMb-Da-HbW" firstAttribute="trailing" secondItem="zLI-lY-5Am" secondAttribute="trailing" constant="44" id="axY-De-IrD"/>
+                            <constraint firstItem="WLq-8w-ziP" firstAttribute="top" secondItem="zLI-lY-5Am" secondAttribute="bottom" constant="53" id="dzt-83-LXb"/>
+                            <constraint firstItem="nJ2-br-c4A" firstAttribute="top" secondItem="hMb-Da-HbW" secondAttribute="top" constant="100" id="hFB-sc-qDN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hMb-Da-HbW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="Cip-Ho-XsO"/>
+                    <connections>
+                        <outlet property="productNamesLabel" destination="WLq-8w-ziP" id="yHR-1y-VrW"/>
+                        <outlet property="totalPriceLabel" destination="zLI-lY-5Am" id="rTv-9a-5xP"/>
+                        <outlet property="totalWeightLabel" destination="nJ2-br-c4A" id="Fng-tm-CEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugg-Hp-LwT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gLp-k5-yHj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0nm-oi-2gZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U85-Iv-0dd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iVz-y1-Hfm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0z-VQ-DRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
